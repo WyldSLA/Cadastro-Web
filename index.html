@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Clientes e Produtos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Cadastro de Clientes e Produtos</h1>
+        <nav>
+            <button onclick="mostrarTela('clientes')">Cadastro de Clientes</button>
+            <button onclick="mostrarTela('produtos')">Cadastro de Produtos</button>
+            <button onclick="mostrarTela('funcionarios')">Cadastro de Funcionários</button>
+            <button onclick="mostrarTela('fornecedores')">Cadastro de Fornecedores</button>
+            <button onclick="mostrarTela('bancos')">Cadastro de Bancos</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="clientes" class="tela">
+            <h2>Cadastro de Clientes</h2>
+            <form id="formClientes">
+                <label for="nomeCliente">Nome:</label>
+                <input type="text" id="nomeCliente" placeholder="Digite o nome" required>
+
+                <label for="emailCliente">E-mail:</label>
+                <input type="email" id="emailCliente" placeholder="Digite o e-mail" required>
+
+                <label for="telefoneCliente">Telefone:</label>
+                <input type="tel" id="telefoneCliente" placeholder="Digite o telefone" required>
+
+                <button type="button" onclick="adicionarCliente()">Adicionar Cliente</button>
+            </form>
+            <ul id="listaClientes"></ul>
+        </section>
+
+        <section id="produtos" class="tela" style="display: none;">
+            <h2>Cadastro de Produtos</h2>
+            <form id="formProdutos">
+                <label for="nomeProduto">Nome:</label>
+                <input type="text" id="nomeProduto" placeholder="Digite o nome do produto" required>
+
+                <label for="categoriaProduto">Categoria:</label>
+                <select id="categoriaProduto" required>
+                    <option value="Alimentação">Alimentação</option>
+                    <option value="Eletrônicos">Eletrônicos</option>
+                    <option value="Moda">Moda</option>
+                    <option value="Beleza e Higiene">Beleza e Higiene</option>
+                    <option value="Casa e Decoração">Casa e Decoração</option>
+                    <option value="Papelaria e Escritório">Papelaria e Escritório</option>
+                    <option value="Automotivo">Automotivo</option>
+                    <option value="Esporte e Lazer">Esporte e Lazer</option>
+                    <option value="Saúde">Saúde</option>
+                    <option value="Tecnologia e Informação">Tecnologia e Informação</option>
+                </select>
+
+                <label for="precoProduto">Preço:</label>
+                <input type="number" id="precoProduto" placeholder="Digite o preço" step="0.01" required>
+
+                <button type="button" onclick="adicionarProduto()">Adicionar Produto</button>
+            </form>
+            <ul id="listaProdutos"></ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
