@@ -1,8 +1,5 @@
 function mostrarTela(tela) {
-    // Oculta todas as telas
     document.querySelectorAll('.tela').forEach(section => section.style.display = 'none');
-    
-    // Mostra a tela selecionada
     document.getElementById(tela).style.display = 'block';
 }
 
@@ -40,4 +37,61 @@ function adicionarProduto() {
     listaProdutos.appendChild(item);
 
     document.getElementById("formProdutos").reset();
+}
+
+function adicionarFuncionario() {
+    const nome_funcionario = document.getElementById("nomeFuncionario").value.trim();
+    const cargo_funcionario = document.getElementById("cargoFuncionario").value.trim();
+    const email_funcionario = document.getElementById("emailFuncionario").value.trim();
+    const tel_funcionario = document.getElementById("telefoneFuncionario").value.trim();
+
+    if (!nome_funcionario || !cargo_funcionario || !email_funcionario || !tel_funcionario) {
+        alert("Por favor, preencha todos os campos!");
+        return;
+    }
+
+    const listaFuncionarios = document.getElementById("listaFuncionarios");
+    const item = document.createElement("li");
+    item.textContent = `Nome: ${nome_funcionario}, Cargo: ${cargo_funcionario}, E-mail: ${email_funcionario} Telefone: ${tel_funcionario}`;
+    listaFuncionarios.appendChild(item);
+
+    document.getElementById("formFuncionarios").reset();
+}
+
+function adicionarFornecedor() {
+    const nome_razao_social = document.getElementById("nomeRazaoSocial").value.trim();
+    const CNPJ_fornecedor = document.getElementById("CNPJFornecedores").value.trim();
+    const nome_Dono = document.getElementById("nomeDono").value.trim();
+    const tel_fornecedor = document.getElementById("telefoneFornecedor").value.trim();
+
+    if (!nome_razao_social || !CNPJ_fornecedor || !nome_Dono || !tel_fornecedor) {
+        alert("Por favor, preencha todos os campos!");
+        return;
+    }
+
+    const listaFornecedores = document.getElementById("listaFornecedores");
+    const item = document.createElement("li");
+    item.textContent = `Razão Social: ${nome_razao_social}, CPNJ: ${CNPJ_fornecedor}, Nome do dono: ${nome_Dono} Telefone: ${tel_fornecedor}`;
+    listaFornecedores.appendChild(item);
+
+    document.getElementById("formFornecedores").reset();
+}
+
+function adicionarBanco() {
+    const nome_Banco = document.getElementById("nomeBanco").value.trim();
+    const razao_social_banco = document.getElementById("razaoSocialBanco").value.trim();
+    const CNPJ_Banco = document.getElementById("CNPJBanco").value.trim();
+    const cod_Banco = document.getElementById("codigoBanco").value.trim();
+
+    if (!nome_Banco || !razao_social_banco || !CNPJ_Banco || !cod_Banco) {
+        alert("Por favor, preencha todos os campos!");
+        return;
+    }
+
+    const listaBancos = document.getElementById("listaBancos");
+    const item = document.createElement("li");
+    item.textContent = `Nome Fantasia: ${nome_Banco}, Razão Social: ${razao_social_banco}, CNPJ: ${CNPJ_Banco} Código do Banco: ${cod_Banco}`;
+    listaBancos.appendChild(item);
+
+    document.getElementById("formBancos").reset();
 }
