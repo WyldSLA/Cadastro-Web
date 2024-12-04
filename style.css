@@ -2,12 +2,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0; 
     padding: 0;
-    background-color: #f4f4f9;
+    background-color: #D6E8EE;
 }
 
 header{
-    background-color: #4CAF50;
-    color: white; 
+    background-color: #ffffff;
+    color: rgb(0, 0, 0); 
     padding: 10px;
     text-align: center;
 }
@@ -19,22 +19,32 @@ nav{
 nav button{
     padding: 10px 20px;
     margin: 5px; 
-    background-color: blue;
+    background-color: #84bfd3;
     border: none; 
     cursor: pointer;
     border-radius: 5px; 
     font-size: 16px;
+    transition: all 0.3s ease;
 }
 
 nav button:hover{
-    background-color: #ddd;
+    background-color: #018abe;
 }
 
 main{
     padding: 20px;
 }
 
+section{
+    margin: auto;
+    background-color: #ffffff;
+    padding: 48px;
+    height: auto;
+    width: 500px;
+    border-radius: 16px;
+}
 form{
+
     margin-bottom: 20px;
 }
 
@@ -47,29 +57,40 @@ form input{
     width: 100%; 
     padding: 8px;
     margin-top: 5px; 
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    border: none;
+    border-bottom: 1px solid #333;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+form input:focus{
+    border-bottom: 1px solid #018abe;
 }
 
 form select{
-    width: 20%;
+    width: 100%;
     padding: 8px;
     margin-top: 5px;
-    border: 1px solid #ddd;
+    border: 1px solid #333;
     border-radius: 5px;
+    outline: none;
+}
+form select:focus{
+    border-color: #018abe;
 }
 button{
     padding: 10px 20px; 
-    background-color: #4CAF50;
+    background-color: #84bfd3;
     color: white; 
     border: none; 
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
+    transition: all 0.3s ease;
 }
 
 button:hover{
-    background-color: #45a049;
+    background-color: #018abe;
 }
 
 ul{
@@ -80,7 +101,7 @@ ul{
 ul li{
     background: #ffffff; 
     margin: 5px 0;
-    padding: 10px; 
+    padding: 12px; 
     border-radius: 5px;
-    border: 1px solid #ddd;
+    border: 1px solid #84bfd3;
 }
